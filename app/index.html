@@ -62,6 +62,8 @@
 				</div>
 				<div class="col m4 s12 input-field">
 					<button id="populate">Random Text</button>
+					<input id="bothOperations" class="bothOps" type="checkbox" />
+					<label for="bothOperations">And generate the table</label>
 					<button id="reset">Clear</button>
 					<button id="generate">Generate</button>
 				</div>
@@ -83,14 +85,14 @@
 			<div class="col s12 m5">
 				<h5>Requirements</h5>
 				<ul>
-					<li>&#10004; The user interface should consist of a textarea, button and results table</li>
-					<li>&#10004; Account for words and letters only, if the paragraphs contains any numbers then inform the user only words are allowed</li>
-					<li>&#10004; The application should accept a minimum of 5 words, a maximum of 500 words</li>
-					<li>&#10004; Treat standalone letters such as `I` and `a` as words</li>
-					<li>&#10004; Special characters such as (- _ ‘ [ ] { } “ £ $ &amp; % ! : ; \ / ) should either be ignored or treated as part of the word they sit within</li>
-					<li>&#10004; Commas and full stops should be tallied</li>
-					<li>&#10004; We are not expecting any server side interactivity or database integration</li>
-					<li>&#10004; All files required to run the application should be supplied in your delivery</li>
+					<li>The user interface should consist of a textarea, button and results table</li>
+					<li>Account for words and letters only, if the paragraphs contains any numbers then inform the user only words are allowed</li>
+					<li>The application should accept a minimum of 5 words, a maximum of 500 words</li>
+					<li>Treat standalone letters such as `I` and `a` as words</li>
+					<li>Special characters such as (- _ ‘ [ ] { } “ £ $ &amp; % ! : ; \ / ) should either be ignored or treated as part of the word they sit within</li>
+					<li>Commas and full stops should be tallied</li>
+					<li>We are not expecting any server side interactivity or database integration</li>
+					<li>All files required to run the application should be supplied in your delivery</li>
 				</ul>
 			</div>
 			<div class="col s12 m7 right-align">
@@ -106,18 +108,18 @@
 							<li>Chrome &#10004;</li>
 						</ul>
 					</li>
-					<li>&#10004; Make your design responsive, ideally making it mobile and tablet compatible</li>
-					<li>&#10004; Order columns alphabetically</li>
-					<li>&#10004; Order rows alphabetically</li>
-					<li>&#10004; Write a test for your app: e.g. jasmine, qunit, karma</li>
+					<li>Make your design responsive, ideally making it mobile and tablet compatible</li>
+					<li>Order columns alphabetically</li>
+					<li>Order rows alphabetically</li>
+					<li>Write a test for your app: e.g. jasmine, qunit, karma</li>
 				</ul>
 				<h5>What we are looking for </h5>
 				<ul class="left-align">
-					<li>&#10004; High quality and maintainable code </li>
-					<li>&#10004; Use of best practice JavaScript techniques </li>
-					<li>&#10004; Accessible, semantic and valid HTML</li>
-					<li>&#10004; Well documented and commented code</li>
-					<li>&#10004; Sensible, separated functionality following the OO paradigms</li>
+					<li>High quality and maintainable code </li>
+					<li>Use of best practice JavaScript techniques </li>
+					<li>Accessible, semantic and valid HTML</li>
+					<li>Well documented and commented code</li>
+					<li>Sensible, separated functionality following the OO paradigms</li>
 				</ul>
 			</div>
 		</div>
@@ -153,7 +155,6 @@
 	<script src="scripts/polyfill/classList.min.js"></script>
 	<script src="scripts/randomText.js"></script>
 	<script src="scripts/main.js"></script>
-	<script src="scripts/tableTools.js"></script>
 	<!-- endbuild -->
 </body>
 

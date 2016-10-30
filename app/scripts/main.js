@@ -4,6 +4,7 @@ var btApp = (function () {
   const thePopulateButton = document.getElementById('populate');
   const theResetButton = document.getElementById('reset');
   const theGenerateButton = document.getElementById('generate');
+  const theCheckedState = document.getElementById('bothOperations');
 
   var init = function () {
 
@@ -13,7 +14,7 @@ var btApp = (function () {
         e.preventDefault();
         populateRandomText(e);
         resizer(e);
-        customValidator();
+        theCheckedState.checked ? customValidator() : null;
       });
 
       addMultipleEventListener(theTextArea, 'blur, click, touchstart, focus, change, keyup, paste', function (e) {
@@ -262,7 +263,7 @@ var btApp = (function () {
 
     let tableHtml = populateTable(maxNumberOfRows, numberOfColumns, letterCountObj, wordCountObj);
     document.getElementById('testResults').classList.remove('hide');
-    labelReporter('Table built successfully! Please feel free to modify the text and select "Generate"', false, 'valid');
+    labelReporter('Table generatated!', false, 'valid');
   };
 
   // Resize the textarea to handle the content within

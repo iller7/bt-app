@@ -54,10 +54,9 @@ ul {
 
 .tasks {
   li {
-      list-style-type: none;
       li {
         list-style-type: disc;
-        margin-left: 10px;
+        margin-left: 20px;
       }
     }
 }
@@ -197,9 +196,35 @@ textarea {
   }
 }
 
+
+// Checkbox
+input[type="checkbox"] {
+  &.bothOps {
+    position: relative;
+    top: -13px;
+    // Text Label Style
+    + label {
+      position: relative;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 0.9rem;
+      top: -14px;
+      left: 3px;
+      width: 85%;
+
+      -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+      -moz-user-select: none; /* mozilla browsers */
+      -khtml-user-select: none; /* webkit (konqueror) browsers */
+      -ms-user-select: none; /* IE10+ */
+      user-select: none;
+    }
+  }
+}
+
+
 // Button
 button {
-  @extend .z-depth-4;
+  @extend .z-depth-2;
   border: $button-border;
   border-radius: $button-radius;
   display: inline-block;
