@@ -263,7 +263,7 @@ var btApp = (function () {
 
     let tableHtml = populateTable(maxNumberOfRows, numberOfColumns, letterCountObj, wordCountObj);
     document.getElementById('testResults').classList.remove('hide');
-    labelReporter('Table generatated!', false, 'valid');
+    labelReporter('Enter at least 5 words, but no more than 500 words please.', false, 'valid');
   };
 
   // Resize the textarea to handle the content within
