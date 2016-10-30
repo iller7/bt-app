@@ -1,6 +1,6 @@
 # Technical Test
 
-> [Faizal Sahebdin's](https://www.linkedin.com/in/projectaqua) technical test for BT. Scaffolded via [Yeoman](http://yeoman.io) and using [gulp](http://gulpjs.com/) for the build process
+> [Faizal Sahebdin's](https://www.linkedin.com/in/projectaqua) technical test. Scaffolded via [Yeoman](http://yeoman.io) and using [gulp](http://gulpjs.com/) for the build process
 
 
 ## Features
