@@ -1,0 +1,82 @@
+// Utility Color Classes
+
+// Google Color Palette defined: http://www.google.com/design/spec/style/color.html
+
+$pink: (
+  "base":       #e91e63,
+  "lighten-5":  #fce4ec,
+  "lighten-4":  #f8bbd0,
+  "lighten-3":  #f48fb1,
+  "lighten-2":  #f06292,
+  "lighten-1":  #ec407a,
+  "darken-1":   #d81b60,
+  "darken-2":   #c2185b,
+  "darken-3":   #ad1457,
+  "darken-4":   #880e4f,
+  "accent-1":    #ff80ab,
+  "accent-2":    #ff4081,
+  "accent-3":    #f50057,
+  "accent-4":    #c51162
+);
+
+$teal: (
+  "base":       #009688,
+  "lighten-5":  #e0f2f1,
+  "lighten-4":  #b2dfdb,
+  "lighten-3":  #80cbc4,
+  "lighten-2":  #4db6ac,
+  "lighten-1":  #26a69a,
+  "darken-1":   #00897b,
+  "darken-2":   #00796b,
+  "darken-3":   #00695c,
+  "darken-4":   #004d40,
+  "accent-1":    #a7ffeb,
+  "accent-2":    #64ffda,
+  "accent-3":    #1de9b6,
+  "accent-4":    #00bfa5
+);
+
+$colors: (
+  "pink": $pink,
+  "teal": $teal
+);
+
+
+// Color Classes
+
+@each $color_name, $color in $colors {
+  @each $color_type, $color_value in $color {
+    @if $color_type == "base" {
+      .#{$color_name} {
+        background-color: $color_value !important;
+      }
+      .#{$color_name}-text {
+        color: $color_value !important;
+      }
+    }
+    @else if $color_name != "shades" {
+      .#{$color_name}.#{$color_type} {
+        background-color: $color_value !important;
+      }
+      .#{$color_name}-text.text-#{$color_type} {
+        color: $color_value !important;
+      }
+    }
+  }
+}
+
+
+// usage: color("name_of_color", "type_of_color")
+// to avoid to repeating map-get($colors, ...)
+
+@function color($color, $type) {
+  @if map-has-key($colors, $color) {
+    $curr_color: map-get($colors, $color);
+    @if map-has-key($curr_color, $type) {
+      @return map-get($curr_color, $type);
+    }
+  }
+  @warn "Unknown `#{name}` in $colors.";
+  @return null;
+}
+
