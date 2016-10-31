@@ -8,13 +8,12 @@ html {
 }
 
 // Having issues with IE8+ and don't have time to polyfill
+/*
 body {
   // display: flex;
   // min-height: 100vh;
   // flex-direction: column;
-  overflow-x: hidden;
 }
-/*
 main {
   flex: 1 0 auto;
 }
@@ -260,6 +259,22 @@ section {
     @extend .z-depth-2;
     padding: 25px 30px 10px;
     margin-bottom: 20px;
+    @media #{$small-and-down} {
+      transition: 2s;
+      padding: 25px 10px 10px;
+    }
+  }
+}
+.no-touch {
+  .touchOnlyMessage {
+    display: none;
+  }
+}
+.touch {
+  .touchOnlyMessage {
+    float: right;
+    font-size: 0.8rem;
+
   }
 }
 
@@ -340,6 +355,14 @@ td, th{
     display: block;
     position: relative;
 
+    thead {
+      width: 105px;
+      overflow: hidden;
+      th {
+        text-align: left; 
+        padding-left :0;
+      }
+    }
     td:empty:before {
       content: '\00a0';
     }
@@ -350,7 +373,6 @@ td, th{
       vertical-align: top;
     }
 
-    th { text-align: left; }
     thead {
       display: block;
       float: left;
@@ -427,6 +449,10 @@ td, th{
 .hoverable {
   transition: box-shadow 1.5s;
   box-shadow: 0;
+  @media #{$small-and-down} {
+    transition: 2s;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
 }
 
 .hoverable:hover {

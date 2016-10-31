@@ -133,7 +133,7 @@ var btApp = (function () {
   var transformLabel = function (el, e = null) {
     if (el) {
       if (el.value.length > 0 || el.autofocus) {
-        labelReporter('Enter at least 5 words, but no more than 500 words please.', false, 'valid');
+        labelReporter('Enter at least 5 words, but no more than 500 words', false, 'valid');
       }
       else {
         labelReporter('Please enter your text here...', true, '');
@@ -263,7 +263,7 @@ var btApp = (function () {
 
     let tableHtml = populateTable(maxNumberOfRows, numberOfColumns, letterCountObj, wordCountObj);
     document.getElementById('testResults').classList.remove('hide');
-    labelReporter('Enter at least 5 words, but no more than 500 words please.', false, 'valid');
+    labelReporter('Enter at least 5 words, but no more than 500 words', false, 'valid');
   };
 
   // Resize the textarea to handle the content within
