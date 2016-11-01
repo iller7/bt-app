@@ -302,7 +302,6 @@ var btApp = (function () {
       %c              |\/    \/||\\    \\|
       %c            _..--\"\"\"''''\"\"\"--.._
       %c      _.-\'''                    ''\'-._
-      %c    -\'        %cHello, BT Person%c        \'-
       %c 
       %c Hi, this is Faizal, Hope you like the code!`,
         'color:#D0E3F1', 'color:#D0E3F1', 'color:#C0DAEC', 'color:#C0DAEC', 'color:#B0D1E8', 'color:#B0D1E8', 'color:#A1C7E3', 'color:#A1C7E3', 'color:#91BEDE', 'color:#91BEDE', 'color:#81B5D9', 'color:#81B5D9', 'color:#72ABD5', 'color:#72ABD5', 'color:#62A2D0', 'color:#62A2D0', 'color:#5299CB', 'color:#5299CB', 'color:#4390C7', 'color:#4390C7', 'color:#4390C7', 'color: #eaeaff', 'color: #60d671');
